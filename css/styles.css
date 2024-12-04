@@ -1,2 +1,112 @@
 /* imported google web fonts: 'Bebas Neue','Joan','Kdam Thmor Pro','League Gothic','Shadows Into Light','Raleway','Roboto Slab' */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Joan&family=Kdam+Thmor+Pro&family=League+Gothic&family=Raleway&family=Roboto+Slab&family=Shadows+Into+Light&display=swap');
+
+body{
+    margin: auto;
+    max-width: 1000px;
+}
+
+h1{
+    font-family: "Raleway";
+    color: grey;
+    margin: 0%;
+    font-size: 3rem;
+    padding-top: 20px;
+}
+
+h4{
+    color: silver;
+    margin: 0%;
+    padding-bottom: 20px;
+}
+
+.author{
+    font-size: smaller;
+}
+
+
+
+.grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1.5rem;
+    grid-template-areas: 
+    "quote-one quote-two quote-three"
+    "quote-four quote-four quote-three"
+    "quote-five quote-five quote-five"
+    "quote-six quote-seven quote-seven";
+}
+div{
+    padding: 5px;
+    color: rgb(113, 113, 113);
+}
+
+.quote-one{
+    font-family: "Bebas Neue";
+    grid-area: quote-one;
+    font-size: 2rem;
+}
+
+.quote-two{
+    font-family: "Joan";
+    grid-area: quote-two;
+    font-size: 1.6rem;
+}
+
+.quote-three{
+    font-family: "Kdam Thmor Pro";
+    grid-area: quote-three;
+    font-size: 2.1rem;
+}
+
+.quote-four{
+    font-family: "League Gothic";
+    grid-area: quote-four;
+    font-size: 1.5rem;
+}
+
+.quote-five{
+    font-family: "Shadows Into Light";
+    grid-area: quote-five;
+    font-size: 1.95rem;
+}
+
+.quote-six{
+    font-family: "Raleway";
+    grid-area: quote-six;
+    font-size: 1.7rem;
+}
+
+.quote-seven{
+    font-family: "Roboto Slab";
+    grid-area: quote-seven;
+    font-size: 2rem;
+}
+
+@media screen and (max-width:800px) {
+    .grid{
+        grid-template-columns: 1fr 1fr;
+        grid-row: auto;
+        grid-template-areas: 
+        "quote-one quote-two"
+        "quote-three quote-three"
+        "quote-four quote-five"
+        "quote-six quote-seven";
+    }
+  }
+
+  @media screen and (max-width:600px) {
+    .grid{
+        grid-template-columns: 1fr;
+        grid-row: auto;
+        grid-template-areas: 
+        "quote-one"
+        "quote-two"
+        "quote-three"
+        "quote-four"
+        "quote-five"
+        "quote-six"
+        "quote-seven";
+    }
+  }
